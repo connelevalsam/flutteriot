@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const sections = [
   {
     title: "Convergence",
@@ -28,20 +30,23 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.18),transparent_45%),linear-gradient(180deg,#ffffff_0%,#dbeafe_30%,#e2e8f0_100%)] text-slate-950 antialiased dark:bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),transparent_40%),linear-gradient(180deg,#020617_0%,#0f172a_35%,#111827_100%)] dark:text-slate-100">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.16),transparent_35%),linear-gradient(180deg,#031a2f_0%,#033047_35%,#0d334a_100%)] text-slate-100 antialiased">
       <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-10 sm:px-8 lg:px-12">
-        <header className="flex flex-col gap-6 border-b border-slate-200 pb-8 dark:border-slate-800 sm:flex-row sm:items-end sm:justify-between">
+        <header className="flex flex-col gap-6 border-b border-slate-700 pb-8 dark:border-slate-700 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">
-            <div className="flex flex-wrap items-center gap-3">
-              <p className="text-sm uppercase tracking-[0.24em] text-sky-600">FlutterIoT Summit 2026</p>
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-3 rounded-full bg-slate-900/70 px-4 py-2 shadow-sm ring-1 ring-white/10">
+                <Image src="/img/logo.png" alt="FlutterIoT logo" width={42} height={42} className="rounded-full" />
+                <p className="text-sm uppercase tracking-[0.28em] text-cyan-300">FlutterIoT Summit 2026</p>
+              </div>
               <a
                 href="/history"
-                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:border-sky-300 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+                className="rounded-full border border-cyan-300 bg-cyan-500/10 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-500/20"
               >
                 Our past work
               </a>
             </div>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Emergence of codes
             </h1>
             <p className="max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300">

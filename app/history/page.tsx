@@ -1,6 +1,22 @@
 import Image from "next/image";
 
-const timelineYears = [
+type TimelineEvent = {
+  title: string;
+  type: string;
+  description: string;
+  img?: string;
+  link?: string;
+};
+
+type TimelineYear = {
+  year: string;
+  title: string;
+  flyer: string;
+  description: string;
+  events: TimelineEvent[];
+};
+
+const timelineYears: TimelineYear[] = [
   {
     year: "2024",
     title: "First edition launch",
@@ -15,12 +31,12 @@ const timelineYears = [
           "The first conference flyer set the tone for IoT innovation and community collaboration.",
       },
       {
-        title: "Community kickoff",
-        type: "Workshop",
+        title: "Community kickoff lecture",
+        type: "Lecture",
         description:
-          "Early workshop sessions invited local developers to build simple sensor dashboards and mobile interfaces.",
-        img: "/img/year_two_host.jpeg",
-        link: "https://x.com/flutterxiot",
+          "A keynote and lecture session brought the community together to explore Flutter + IoT use cases and collaborative learning.",
+        img: "/img/year_one_lectures.JPG",
+        link: "https://x.com/ConnelBlaze/status/1804464436352106687?s=20",
       },
     ],
   },
@@ -83,24 +99,36 @@ const galleryImages = [
     src: "/img/year_two_speaker2.jpeg",
     alt: "Speaker presentation at FlutterIoT",
   },
+  {
+    src: "/img/year_one_games01.png",
+    alt: "Year one games showcase",
+  },
+  {
+    src: "/img/year_two_games01.png",
+    alt: "Year two games showcase",
+  },
 ];
 
 export default function HistoryPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-950 antialiased dark:bg-[#050508] dark:text-slate-100">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.12),transparent_30%),linear-gradient(180deg,#021628_0%,#04293d_40%,#0a3a52_100%)] text-slate-100 antialiased">
       <main className="mx-auto w-full max-w-6xl px-6 py-10 sm:px-8 lg:px-12">
         <section className="space-y-6 pb-10">
-          <p className="text-sm uppercase tracking-[0.24em] text-sky-600">Our timeline</p>
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+          <div className="flex flex-wrap items-center gap-4 rounded-full border border-slate-700 bg-slate-900/70 px-4 py-2 shadow-sm">
+            <Image src="/img/logo.png" alt="FlutterIoT logo" width={42} height={42} className="rounded-full" />
+            <p className="text-sm uppercase tracking-[0.28em] text-cyan-200">FlutterIoT timeline</p>
+          </div>
+          <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">Our timeline</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             How FlutterIoT grew year by year
           </h1>
-          <p className="max-w-3xl text-base leading-8 text-slate-600 dark:text-slate-300">
+          <p className="max-w-3xl text-base leading-8 text-slate-200">
             A timeline of what we’ve done so far: from the first flyer and launch to live demos, workshops, and the community momentum that followed.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="/"
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+              className="inline-flex items-center justify-center rounded-full border border-cyan-400/40 bg-slate-950/80 px-5 py-3 text-sm font-semibold text-cyan-100 transition hover:border-cyan-300 hover:bg-slate-900"
             >
               Back to home
             </a>
@@ -108,7 +136,7 @@ export default function HistoryPage() {
               href="https://x.com/flutterxiot"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-sky-500 dark:hover:bg-sky-400"
+              className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
               Follow @flutterxiot
             </a>

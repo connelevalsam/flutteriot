@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "FlutterIoT Summit 2026 | Emergence of codes",
   description: "A one-page conference site for FlutterIoT Summit 2026 exploring Flutter + IoT across Africa.",
+  metadataBase: new URL("https://example.com"),
+  themeColor: "#0d334a",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
