@@ -32,7 +32,15 @@ export default function Home() {
       <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-10 sm:px-8 lg:px-12">
         <header className="flex flex-col gap-6 border-b border-slate-200 pb-8 dark:border-slate-800 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.24em] text-sky-600">FlutterIoT Summit 2026</p>
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="text-sm uppercase tracking-[0.24em] text-sky-600">FlutterIoT Summit 2026</p>
+              <a
+                href="/history"
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:border-sky-300 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+              >
+                Our past work
+              </a>
+            </div>
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
               Emergence of codes
             </h1>
